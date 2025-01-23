@@ -120,9 +120,11 @@ def radio_updated(mode, figure):
             mode: The new mode
     '''
     # TODO : Update the figure's data and y axis, as well as the informational
-    # text indicating the mode
-    new_fig = figure
-    return new_fig, ''
+    # text indicating the mode 
+    # DONE
+    new_fig = bar_chart.draw(figure, data, mode)
+    bar_chart.update_y_axis(new_fig, mode)
+    return new_fig, mode
 
 
 data = prep_data()
